@@ -18,6 +18,11 @@ export default (state = [0,0], action) => {
             newState[action.index]*=action.mutipler
             return newState;
         }
+        case'DEPLY':{
+            const newState = [...state]
+            newState[action.index]++;
+            return newState;
+        }
 
         default:
             return state

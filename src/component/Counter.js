@@ -14,16 +14,16 @@ class Counter extends Component {
 
 
     render() {
-        const {value, onIncrement, onDecrement} = this.props;
+        const {value, onIncrement, onDecrement,onDeply} = this.props;
 
         const index = this.props.index;
 
             return (<p>
             Clicked: {value} times
             {' '}
-            <button onClick={()=>setTimeout(()=>{
+            <button onClick={()=>{
                 onIncrement(index)
-            },1000)}>
+            }}>
                 +
             </button>
             <button onClick={()=>onDecrement(index)}>
@@ -33,6 +33,11 @@ class Counter extends Component {
             <button onClick={this.multiple}>
                 x
             </button>
+                <button onClick={()=>setTimeout(()=>{
+                    onDeply(index)
+                },1000)}>
+                    Increment Async
+                </button>
 
         </p>)
     }

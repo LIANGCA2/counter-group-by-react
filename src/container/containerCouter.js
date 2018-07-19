@@ -15,7 +15,8 @@ const mapDispatchToProps = (dispatch,ownProps)=>{
     return {
         onIncrement:(index) => dispatch(increment(index)),
     onDecrement:(index) => dispatch(decrement(index)),
-    onMultiplication:(mutipler,index) =>dispatch(mutiply(mutipler,index))
+    onMultiplication:(mutipler,index) =>dispatch(mutiply(mutipler,index)),
+        onDeply:(index) => dispatch(increment(index))
     }
 
 }
